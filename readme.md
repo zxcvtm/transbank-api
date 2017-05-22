@@ -32,6 +32,7 @@ Si se desea cambiar a POST, se puede modificar esto en /routes/api.php y los dat
         }
 
 **Importante:** Deben almacenarse en una base de datos el Tbk-Token y el username, necesarios para cobrar, revertir y eliminar la tarjeta.
+
 ####Pago
  Para realizar un cobro, se necesita enviar por parámetros el monto a cobrar(amount), el username, una orden de compra(buyorder) y el tbk-token obtenido de la inscripción.
  La orden de compra debe generarse y debe ser unica de la compra.
