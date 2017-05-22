@@ -30,6 +30,16 @@ Route::group(['prefix'=>'transbank'],function (){
         'as'    =>'finish'
     ]);
 
+    Route::get('reverse',[
+        'uses'  =>'TransbankController@reverseOneClick',
+        'as'    =>'reverse'
+    ]);
+
+    Route::get('removeUser',[
+        'uses'  =>'TransbankController@removeUserOneClick',
+        'as'    =>'reverse'
+    ]);
+
     Route::get('webpay',[
         'uses'  =>'TransbankController@webpayInit',
         'as'    =>'webpayplus'

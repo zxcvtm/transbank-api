@@ -93,7 +93,7 @@ class TransbankController extends Controller
     public function removeUserOneClick(Request $request){
         $params=$request->all();
 
-        if (!isset($params['amount'],$params['username'],$params['buyorder'])){
+        if (!isset($params['tbkToken'],$params['username'])){
             return $this->errorResponse("Invalid parameters");
         }
 
