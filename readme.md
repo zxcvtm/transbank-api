@@ -9,9 +9,13 @@ Instalar Laravel
 https://laravel.com/docs/5.4
 
 ###### Índice
-- [OneClick](#pago)
-- John Adams
-- Thomas Jefferson
+- [OneClick](#oneclick)
+    1. [Inscripción](#inscripción)
+    2. [Pago](#pago)
+    3. [Reversa](#reversa)
+    4. [Desinscripción](#desinscripción)
+- [Webpay Plus](#webpay-plus)
+- [Producción](#producción)
 ## OneClick
 La modalidad de pago Oneclick permite al tarjetahabiente realizar pagos en el comercio sin la
 necesidad de ingresar cada vez información de la tarjeta de crédito al momento de realizar la
@@ -70,6 +74,8 @@ Si se desea cambiar a POST, se puede modificar esto en /routes/api.php y los dat
 Webpay es una pasarela de pago desarrollada por Transbank para realizar transacciones desde Internet con tarjetas bancarías de crédito y débito. Hoy en día Webpay constituye una herramienta clave para el desarrollo de un comercio electrónico eficaz y seguro en Chile. 
 
 En general un flujo de pago en Webpay se inicia desde el comercio, en donde el tarjetahabiente selecciona los productos o servicios a pagar. Una vez realizado esto, elige pagar con Webpay en donde, dependiendo de los productos contratados por el comercio, se despliegan las alternativas de pago de crédito con productos cuotas y débito Redcompra. Durante el proceso de pago se autentica el tarjetahabiente antes de realizar la transacción financiera, con el objetivo de validar que la tarjeta este siendo utilizada por el titular. Una vez resuelta la autenticación se procede a autorizar el pago. Webpay entrega al sistema del comercio el resultado de la autorización y si ésta es aprobada, Webpay emite un comprobante electrónico del pago.
+
+### Servicios
 
 ###### initTransaction
 
