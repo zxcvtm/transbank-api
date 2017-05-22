@@ -9,7 +9,7 @@ Instalar Laravel
 https://laravel.com/docs/5.4
 
 ###### Índice
-- [OneClick](#OneClick)
+- [OneClick](#pago)
 - John Adams
 - Thomas Jefferson
 ## OneClick
