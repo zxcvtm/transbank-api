@@ -94,14 +94,14 @@ Estos son los datos de tarjetas para que puedas probar en el ambiente de integra
 #####VISA CREDIT CARD (SERÁ APROBADA)
 Number: 4051885600446623
 CVV: 123
-Year: any / cualquiera
-Month: any / cualquiera
+Year: cualquiera
+Month: cualquiera
 
 #####MASTERCARD CREDIT CARD (SERÁ DENEGADA)
 Number: 5186059559590568
 CVV: 123
-Year: any / cualquiera
-Month: any / cualquiera
+Year: cualquiera
+Month: cualquiera
 
 #####DEBIT CARD
 CardNumber: 12345678
