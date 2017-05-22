@@ -36,7 +36,7 @@ Para realizar la inscrión basta con  hacer una llamada por GET a la siguiente d
 
         /api/transbank/inscription?email=test@test.cl&username=test
 
-Si se desea cambiar a POST, se puede modificar esto en /routes/api.php y los datos se deben enviar como JSON:
+Si se desea cambiar a POST, se puede modificar en /routes/api.php y los datos se deben enviar como JSON:
 
         {
         "email":"test@test.cl",
@@ -53,7 +53,7 @@ Si se desea cambiar a POST, se puede modificar esto en /routes/api.php y los dat
  
         /api/transbank/oneClickPayment?amount="MONTO"&username="USERNAME"&buyorder="ORDEN DE COMPRA"&tbkToken="TBK TOKEN"
 
-Si se desea cambiar a POST, se puede modificar esto en /routes/api.php y los datos se deben enviar como JSON.
+Si se desea cambiar a POST, se puede modificar en /routes/api.php y los datos se deben enviar como JSON.
 
 **Importante:** La orden de compra debe guardarse ya que es necesaria en caso de revertir la compra.
 ###### Revertir Pago
@@ -61,14 +61,14 @@ Si se desea cambiar a POST, se puede modificar esto en /routes/api.php y los dat
         
         /api/transbank/reverse?buyorder="ORDERN DE COMPRA"
 
-Si se desea cambiar a POST, se puede modificar esto en /routes/api.php y los datos se deben enviar como JSON.
+Si se desea cambiar a POST, se puede modificar en /routes/api.php y los datos se deben enviar como JSON.
 
 ###### Desinscripción
 Para desinscribir una tarjeta, se necesita enviar por parámetros el username y el tbk token obtenido de la inscripción.
 
         /api/transbank/removeUser?username="USERNAME"&tbkToken="TBK TOKEN"
 
-Si se desea cambiar a POST, se puede modificar esto en /routes/api.php y los datos se deben enviar como JSON.
+Si se desea cambiar a POST, se puede modificar en /routes/api.php y los datos se deben enviar como JSON.
 
 ## Webpay Plus
 Webpay es una pasarela de pago desarrollada por Transbank para realizar transacciones desde Internet con tarjetas bancarías de crédito y débito. Hoy en día Webpay constituye una herramienta clave para el desarrollo de un comercio electrónico eficaz y seguro en Chile. 
@@ -83,7 +83,7 @@ Para realizar una transacción por webpay plus, se necesita enviar por parámetr
 
         /api/transbank/webpay?amount=1000&buyorder=123456789
 
-Si se desea cambiar a POST, se puede modificar esto en /routes/api.php y los datos se deben enviar como JSON.
+Si se desea cambiar a POST, se puede modificar en /routes/api.php y los datos se deben enviar como JSON.
 
 ### Producción
 El proyecto esta funcionando en modo de integración, para pasarlo a producción se deberá modificar el siguiente archivo:
