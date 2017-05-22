@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Input;
 use Freshwork\Transbank\CertificationBagFactory;
 use Freshwork\Transbank\TransbankServiceFactory;
 use Freshwork\Transbank\RedirectorHelper;
@@ -42,15 +40,6 @@ class TransbankController extends Controller
         $username = $params['username'];
         $email = $params['email'];
 
-/*
- * para probar por get, comentar las lineas anteriores, descomentar estas y en routes api cambiar la ruta por get
-        $username = Input::get('username', '');
-        $email = Input::get('email', '');
-
-        if ($email == '' || $username ==''){
-            return $this->errorResponse("Invalid parameters");
-        }
-*/
         $certificationBag = CertificationBagFactory::integrationOneClick();
         $oneClick = TransbankServiceFactory::oneclick($certificationBag);
         $response = $oneClick->initInscription($username, $email, url('/api/transbank/finish'));
@@ -141,9 +130,7 @@ class TransbankController extends Controller
 
         $plus = TransbankServiceFactory::normal($bag);
 
-        //For normal transactions, you can just add one TransactionDetail
-        //Para transacciones normales, solo se puede añadir una linea de detalle de transacción.
-        $plus->addTransactionDetail($amount, $buyorder); //Amount and BuyOrder
+        $plus->addTransactionDetail($amount, $buyorder);
 
         $response = $plus->initTransaction(url('/api/transbank/payment'), url('/api/transbank/success'));
 
@@ -155,11 +142,8 @@ class TransbankController extends Controller
         $plus = TransbankServiceFactory::normal($bag);
 
         $response = $plus->getTransactionResult();
-        //If everything goes well (check stock, check amount, etc) you can call acknowledgeTransaction to accept the payment. Otherwise, the transaction is reverted in 30 seconds.
-        //Si todo está bien, peudes llamar a acknowledgeTransaction. Si no se llama a este método, la transaccion se reversará en 30 segundos.
         $plus->acknowledgeTransaction();
 
-        //Redirect back to Webpay Flow and then to the thanks page
         return RedirectorHelper::redirectBackNormal($response->urlRedirection);
     }
     public  function success(){
