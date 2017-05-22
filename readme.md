@@ -12,7 +12,7 @@ https://laravel.com/docs/5.4
 - [OneClick](#oneclick)
     1. [Inscripción](#inscripción)
     2. [Pago](#pago)
-    3. [Reversa](#reversa)
+    3. [Reversa](#revertir-pago)
     4. [Desinscripción](#desinscripción)
 - [Webpay Plus](#webpay-plus)
 - [Producción](#producción)
