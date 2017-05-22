@@ -15,6 +15,7 @@ https://laravel.com/docs/5.4
     3. [Reversa](#revertir-pago)
     4. [Desinscripción](#desinscripción)
 - [Webpay Plus](#webpay-plus)
+- [Test-Data](#test-data)
 - [Producción](#producción)
 ## OneClick
 La modalidad de pago Oneclick permite al tarjetahabiente realizar pagos en el comercio sin la
@@ -84,6 +85,32 @@ Para realizar una transacción por webpay plus, se necesita enviar por parámetr
         /api/transbank/webpay?amount=1000&buyorder=123456789
 
 Si se desea cambiar a POST, se puede modificar en /routes/api.php y los datos se deben enviar como JSON.
+
+## Test Data
+Estos son los datos de tarjetas para que puedas probar en el ambiente de integración.  
+
+![image](https://cloud.githubusercontent.com/assets/1103494/16890030/f125835c-4ab8-11e6-8bf9-847c847085a7.png)
+
+#####VISA CREDIT CARD (SERÁ APROBADA)
+Number: 4051885600446623
+CVV: 123
+Year: any / cualquiera
+Month: any / cualquiera
+
+#####MASTERCARD CREDIT CARD (SERÁ DENEGADA)
+Number: 5186059559590568
+CVV: 123
+Year: any / cualquiera
+Month: any / cualquiera
+
+#####DEBIT CARD
+CardNumber: 12345678
+
+####BANK VIEW
+RUT: 11.111.111-1
+Password: 123
+
+![captura de pantalla 2016-07-15 a las 6 28 41 p m](https://cloud.githubusercontent.com/assets/1103494/16890148/fdcf065e-4ab9-11e6-8d1a-83b9f8537c5c.png)
 
 ### Producción
 El proyecto esta funcionando en modo de integración, para pasarlo a producción se deberá modificar el siguiente archivo:
