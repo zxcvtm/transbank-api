@@ -4,6 +4,14 @@ Este es un proyecto realizado en PHP utilizando Laravel.
 Implementa la librería Transbank WebServices SDK para la integración de Webpay Plus y Webpay OneClick. 
 Los creditos por esta libreríapertenecen a **Gonzalo De Spirito** de freshworkstudio.com y simplepay.cl.
 
+###### Requerimientos
+Instalar Laravel
+https://laravel.com/docs/5.4
+
+###### Índice
+- [OneClick](#OneClick)
+- John Adams
+- Thomas Jefferson
 ## OneClick
 La modalidad de pago Oneclick permite al tarjetahabiente realizar pagos en el comercio sin la
 necesidad de ingresar cada vez información de la tarjeta de crédito al momento de realizar la
